@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Post $model, $key, $index, $column) {
+                'urlCreator' => function ($action, \app\models\Post $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'idpost' => $model->idpost]);
                  }
             ],
